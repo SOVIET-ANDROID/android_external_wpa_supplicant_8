@@ -29,7 +29,7 @@ L_CFLAGS += -DANDROID_LOG_NAME=\"wpa_supplicant\"
 L_CFLAGS += -Wall -Werror
 
 # Keep sometimes uninitialized warnings
-L_CFLAGS += -Wno-error-sometimes-uninitialized
+L_CFLAGS += -Wno-error=sometimes-uninitialized
 
 # Disable incompatible pointer type warnings
 L_CFLAGS += -Wno-incompatible-pointer-types
@@ -40,9 +40,6 @@ L_CFLAGS += -Wno-parentheses-equality
 
 # Disable sign compare warnings
 L_CFLAGS += -Wno-sign-compare
-
-# TODO: move off readdir_r upstream, pull fix back (http://b/72326431).
-L_CFLAGS += -Wno-error-deprecated-declarations
 
 # Disable unused function warnings
 L_CFLAGS += -Wno-unused-function
